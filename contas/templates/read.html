@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud Ler Registros  - Django</title>
+
+    {% include 'parciais/_head_sistema.html' %}
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png'%}">
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <img src="imagens/menu-aberto.png" alt="">
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a href="{% url 'sistema' %}" class="nav-link">Escolher outra opção</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        
+
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div style="width:100%;" class="container-section">
+            {% include 'parciais/_messages.html' %}
+            <div style="background-color: white; margin-top: 100px; width: 80%;" class="container-fluid textos">
+
+                <table id="tabela"  class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Deletar</th>
+                        <th scope="col">Data de Nasc.</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Cpf</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for pessoa in object_list %}
+                      <tr>
+                        <th scope="row">{{ pessoa.id }}</th>
+                        <td>{{ pessoa.nome }}</td>
+                        <td> <a class="btn btn-info" href="{% url 'atualizar' pk=pessoa.id %}">Editar</a></td>
+                        <td> <a class="btn btn-danger" href="{% url 'deletar' pk=pessoa.id %}">Deletar</a></td>
+                        <td>{{ pessoa.data_nasc}}</td>
+                        <td>{{ pessoa.telefone}}</td>
+                        <td>{{ pessoa.estado}}</td>
+                        <td>{{ pessoa.cpf}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#tabela").DataTable({
+        responsive: true,
+        // "bSort": false,
+        "aaSorting": [],
+        "pageLength": 5,
+        "language": {
+            "decimal": "",
+            "emptyTable": "Sem dados disponíveis",
+            "info": "Mostrando de _START_ até _END_ de _TOTAL_ registos",
+            "infoEmpty": "Mostrando de 0 até 0 de 0 registos",
+            "infoFiltered": "(filtrado de _MAX_ registos no total)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ registos",
+            "loadingRecords": "A carregar dados...",
+            "processing": "A processar...",
+            "search": "Procurar:",
+            "zeroRecords": "Não foram encontrados resultados",
+            "paginate": {
+                "first": "Primeiro",
+                "last": "Último",
+                "next": "Seguinte",
+                "previous": "Anterior"
+            },
+            "aria": {
+                "sortAscending": ": ordem crescente",
+                "sortDescending": ": ordem decrescente"
+            }
+        }
+    });
+
+
+        });
+
+
+    </script>
+</body>
+</html>

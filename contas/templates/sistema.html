@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud Home Sistema  - Django</title>
+
+    {% include 'parciais/_head_sistema.html' %}
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png'%}">
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <img src="imagens/menu-aberto.png" alt="">
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a href="{% url 'sair' %}" class="nav-link">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        
+
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div class="container-section">
+            {% include 'parciais/_messages.html' %}
+            <div class="container-fluid textos">
+
+                <h1>SEJA <span>BEM VINDO!</span></h1>
+                <!--<p>Clique em “Entrar no Sistema” ou Faça Logout.</p>-->
+
+
+
+                <div class="container-fluid imagem-seta">
+                    <a href="#home2">
+                        <img width="364px" src="{% static 'assets/vamos-lá.png' %}" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    <section id="home2"><!--Inicio Section-->
+
+        <div class="container-section">
+            {% include 'parciais/_messages.html' %}
+            <div class="container-fluid textos">
+
+                <h1>Escolha uma das opções!</h1>
+                <!--<p>Clique em “Entrar no Sistema” ou Faça Logout.</p>-->
+
+
+            </div>
+
+            <div class="cads-box">
+                <div class="cards-func">
+
+                    <a href="{% url 'criar' %}">
+                        <div class="card-unit">
+                            <img src="{% static 'assets/card1.png' %}" alt="">
+                            
+                        </div>
+                    </a>
+
+                    <a href="{% url 'exibir' %}">
+                        <div class="card-unit">
+                            <img src="{% static 'assets/card2.png' %}" alt="">
+                            
+                        </div>
+                    </a>
+
+
+                </div>
+
+                <div class="cards-func">
+
+                    <a href="{% url 'exibir' %}">
+                        <div class="card-unit">
+                            <img src="{% static 'assets/card3.png' %}" alt="">
+                        </div>
+                    </a>
+
+                    <a href="{% url 'exibir' %}">
+                        <div class="card-unit">
+                            <img src="{% static 'assets/card4.png' %}" alt="">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+</body>
+</html>

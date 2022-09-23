@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud Cadastro - Django</title>
+
+    {% include 'parciais/_head_cadastro.html' %}
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png'%}">
+                </a>
+
+            </div>
+        </nav>
+
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div class="container-section">
+
+            <div class="container-fluid textos">
+
+                <div class="container-fluid formulario">
+                    <div class="row">
+                        <div class="col-6">
+                            <img width="226" src="{% static 'assets/Frame 18 (1).png'%}" alt="">
+                        </div>
+
+                        <div class="col-6 text">
+                            <h4>Cadastre<span>-se!</span></h1>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-box">
+                        {% include 'parciais/_messages.html' %}
+
+                        <form method="POST" action="{% url 'cadastro' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome de usuário:</label>
+                                <input name="usuario" type="text" class="form-control"  value="{{ request.POST.usuario }}" placeholder="Seu nome de Usuário">
+                                <small class="form-text text-muted">Deve ter pelo menos 7 Caracteres.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Seu E-mail:</label>
+                                <input name="email" type="email" value="{{ request.POST.email }}" class="form-control" placeholder="um E-mail válido">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Sua Senha:</label>
+                                <input name="senha" type="password" class="form-control" placeholder="Sua Senha">
+                                <small class="form-text text-muted">Deve ter pelo menos 7 Caracteres.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Repita sua Senha:</label>
+                                <input name="senha2" type="password" class="form-control" placeholder="Repita sua Senha">
+                                <small class="form-text text-muted">Deve ter pelo menos 7 Caracteres.</small>
+                            </div>
+
+                            <a style="margin-right: 20px ; text-decoration: none;" href="{% url 'index_login' %}">
+                                <img width="44px"  src="{% static 'assets/seta-esquerda.png' %}" alt="">
+                            </a>
+
+                            <button type="submit" class="btn btn-custom">Cadastar-me</button>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+</body>
+</html>

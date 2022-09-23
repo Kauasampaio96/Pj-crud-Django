@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud Logout  - Django</title>
+
+    {% include 'parciais/_head_acesso.html' %}
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png'%}">
+                </a>
+
+            </div>
+        </nav>
+
+        
+
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div class="container-section">
+            {% include 'parciais/_messages.html' %}
+
+            <div class="container-fluid textos">
+
+                <h1>Logout efetuado <span>com sucesso!</span></h1>
+                <p>Obrigado por usar o Sistema, volte em breve! ;)</p>
+
+
+                <div class="botao">
+                    <a href="{% url 'index' %}">
+                        <button class="btn btn-lg btn-custom">Voltar para o início</button>
+                    </a>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+</body>
+</html>

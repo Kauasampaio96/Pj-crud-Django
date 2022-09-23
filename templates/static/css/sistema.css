@@ -1,0 +1,277 @@
+/*GERAL*/
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 13px;
+    background-color:#004695;
+}
+
+html{
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    height: 100%;
+
+    background: linear-gradient(110.66deg, #FF9A61 15.15%, #5484FF 108.14%);
+    font-family:Helvetica,  Arial,  sans-serif;
+
+}
+
+.img-voltar{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+}
+
+.img-voltar img{
+    width: 75px;
+}
+
+
+.container-header{
+    margin: 0 20%;
+}
+
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#home .botao{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+
+#home .botao a .btn-custom{
+    background: linear-gradient(93.15deg, #0A0A0A -4.53%, #0B2487 101.59%);
+    border-radius: 6.79487px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    margin-top: 100px;
+
+    transition: all 0.5s ease-in-out;
+}
+
+#home .botao a .btn-custom:hover{
+    transform: scale(1.05);
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.container-section {
+    width: 80%;
+}
+
+.textos {
+    width: 950px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.textos  > .imagem-seta{
+    text-align: center;
+    position: relative;
+    top: 180px;
+
+    animation-name: imagem-seta;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+
+@keyframes imagem-seta{
+    0%{
+        transform: scale(1.0);
+    }
+
+    100%{
+        transform: scale(1.04);
+    }
+}
+
+
+.container-section h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: #00051A;
+    display: block;
+    text-align: center;
+}
+
+.container-section h1 span{
+    color: #002098;
+}
+
+.container-section h4{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    display:inline-block;
+    color: #00051A;
+}
+
+.container-section h4 span{
+    color: #002098;
+}
+
+.container-section hr{
+    display: inline-block;
+    width: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.container-section p{
+    width:105%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #00051A;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+}
+
+#nav-principal .nav-item{
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    background: linear-gradient(93.15deg, #0A0A0A -4.53%, #0B2487 101.59%);
+    transition: 0.5s all ease-in-out;
+}
+
+#nav-principal .nav-item:hover{
+    transform: scale(1.05);
+}
+
+#nav-principal .nav-item a{
+    color: white;
+}
+
+
+
+#home2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding-bottom: 200px;
+
+    background: linear-gradient(110.66deg, #264FBA 15.15%, #AB633A 108.14%);
+}
+
+
+#home2 h1{
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 105px;
+    font-size: 60px;
+}
+
+#home2 .card-box{
+    margin-top: 100px;
+}
+
+#home2 .cards-func{
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+
+}
+
+#home2 .cards-func .card-unit{
+
+    border-radius: 5px;
+    height: 200px;
+    width: 350px;
+    display: inline-block;
+    margin: 0 50px;
+    border-radius: 5px;
+
+    
+    
+}
+
+#home2 .cards-func a{
+    transition: 0.5 all ease-in-out;
+}
+
+#home2 .cards-func a:hover{
+
+    transform: scale(1.03);
+
+}
+
+
+
+
+
+
+
+@media (min-width: 226px) { 
+   
+
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+    
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1270px) {
+    .container-section h1{
+        font-size: 85px;
+    }
+
+    .container-section {
+        width: 50.8125em;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) { 
+    .container-section {
+        width: 60.8125em;
+    }
+}

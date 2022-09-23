@@ -1,0 +1,88 @@
+{% load static %}
+{% load bootstrap %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud Deletar Registro - Django</title>
+
+    {% include 'parciais/_head_cadastro.html' %}
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png'%}">
+                </a>
+
+            </div>
+        </nav>
+
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div class="container-section">
+
+            <div class="container-fluid textos">
+
+                <div class="container-fluid formulario">
+                    <div class="row">
+                        <div class="col-6">
+                            <img width="226" src="{% static 'assets/Frame 18 (1).png'%}" alt="">
+                        </div>
+
+                        <div class="col-6 text">
+                            <h4>Deletar um <span>registro!</span></h1>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-box">
+                        {% include 'parciais/_messages.html' %}
+
+                        <h3>Tem certeza que quer deletar o registro {{ object.nome }}?</h3>
+
+                        <form method="POST" >
+                            {% csrf_token %}
+                            <button style="margin-right: 50px; margin-top:70px;" type="submit" class="btn btn-custom">Deletar Registro</button>
+                            <button style="margin-right: 50px; margin-top:70px;" type="reset" onclick="location.href='{% url 'exibir' %}'  " class="btn btn-custom">Não Deletar Registro</button>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+
+
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"> </script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"> </script>
+    <script src="{% static 'js/mascara.js' %}"> </script>
+</body>
+</html>

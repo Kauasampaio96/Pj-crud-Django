@@ -1,0 +1,350 @@
+/*GERAL*/
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 13px;
+    background-color:#004695;
+}
+
+html{
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    height: 100%;
+
+    background: linear-gradient(110.66deg, #FF9A61 15.15%, #5484FF 108.14%);
+    font-family:Helvetica,  Arial,  sans-serif;
+
+}
+
+.img-voltar{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+}
+
+.img-voltar img{
+    width: 75px;
+}
+
+
+.container-header{
+    margin-left: 5%;
+}
+
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#home .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .botao a .btn-custom{
+    background: linear-gradient(93.15deg, #0A0A0A -4.53%, #0B2487 101.59%);
+    border-radius: 6.79487px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    margin-top: 100px;
+
+    transition: all 0.5s ease-in-out;
+}
+
+#home .botao a .btn-custom:hover{
+    transform: scale(1.05);
+    color: rgba(255,255,255,0.8);
+}
+
+.container-section {
+    width: 80%;
+}
+
+.textos {
+    width: 950px;
+}
+
+.textos  > .imagem-seta{
+    text-align: center;
+    position: relative;
+    top: 180px;
+
+    animation-name: imagem-seta;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes imagem-seta{
+    0%{
+        top: 180px;
+    }
+
+    100%{
+        top: 200px;
+    }
+}
+
+
+.container-section h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 115px;
+    color: #00051A;
+    display: block;
+    text-align: center;
+}
+
+.container-section h1 span{
+    color: #002098;
+}
+
+.container-section h4{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    display:inline-block;
+    color: #00051A;
+}
+
+.container-section hr{
+    display: inline-block;
+    width: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.container-section p{
+    width:105%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #00051A;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+}
+
+
+
+#home2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding-bottom: 200px;
+
+    background: linear-gradient(110.66deg, #264FBA 15.15%, #AB633A 108.14%);
+}
+
+
+#home2 h1{
+    margin-top: 200px;
+    margin-bottom: 105px;
+    font-size: 75px;
+    text-decoration: underline;
+}
+
+
+
+#home2 .col-md-6{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#home2 .card{
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#home2 .card img{
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+#home2 .card .img_html{
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+#home2 .card h3{
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    color: #00051A;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#home2 .card p{
+    margin-top: 20px;
+    width: 90%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #00051A;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#home2 .imagem-seta{
+    text-align: center;
+    position: relative;
+    top: 70px;
+
+    animation-name: imagem-seta-home2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes imagem-seta-home2{
+    0%{
+        top: 70px;
+    }
+
+    100%{
+        top: 90px;
+    }
+}
+
+#home2 .col-md-3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}   
+
+#home2 .col-md-3 .card{
+    background-color: white;
+    width: 400px;
+    height: 550px;
+    border-radius: 20px;
+}
+
+#home2  .col-md-3 .card p{
+    margin-top: 0px;
+    width: 90%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #00051A;
+    font-size: 13px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+#home2  .col-md-3 .card iframe{
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 20px; 
+    height: 13.359375em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+#home2  .col-md-3 .card video{
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 20px; 
+    height: 13.359375em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#home2  .col-md-3 .card .links{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+#home2  .col-md-3 .card a{
+    margin-right: 50px;
+    padding-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+#home2  .col-md-3 .card a:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+@media (min-width: 226px) { 
+   
+
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+    
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1270px) {
+    .container-section h1{
+        font-size: 85px;
+    }
+
+    .container-section {
+        width: 50.8125em;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) { 
+    .container-section {
+        width: 60.8125em;
+    }
+}

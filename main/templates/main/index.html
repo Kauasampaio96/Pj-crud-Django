@@ -1,0 +1,263 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Projeto Crud- Django</title>
+
+    {% include 'parciais/_head.html' %}
+
+</head>
+<body>
+
+    <header><!--Inicio Cabecalho-->
+        <nav  class="navbar navbar-expand-md navbar-light fixed-top  navbar-transparente">
+            <div class="container container-header">
+
+                <a class="navbar-brand" href="index.html">
+                    <img width="300" src="{% static 'assets/Frame 18 (1).png' %}">
+                </a>
+
+            </div>
+        </nav>
+
+        <div class="img-voltar">
+            <a href="#home">
+                <img class="img-fluid" width="125px" src="{% static 'assets/voltar ao topo.png' %}" alt="">
+            </a>
+        </div>
+    </header><!--Fim Cabecalho-->
+
+    
+    <section id="home"><!--Inicio Section-->
+
+        <div class="container-section">
+
+            <div class="container-fluid textos">
+                <span> <hr> </span><h4>Olá</h4>
+                <h1>Me chamo <span>Kauã</span></h1>
+                <p>Atualmente estou estudando a linguagem PYTHON voltada para a WEB com o Framwork Django, Esse é um projeto CRUD onde o usuário poderá fazer Consultas/ Cadastros/ Atualização e Exclusão de registros no banco de dados, tal projeto foi escolhido pois com ele consegui implementar conhecimentos básicos do framework Django.</p>
+
+                <div class="botao">
+                    <a href="{% url 'index_login' %}">
+                        <button class="btn btn-lg btn-custom">Acesse o sistema</button>
+                    </a>
+                </div>
+                
+
+                <div class="container-fluid imagem-seta">
+                    <a href="#home2">
+                        <img width="64px" src="{% static 'assets/setas-para-baixo.png' %}" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+
+    <section id="home2"><!--Inicio Section-->
+
+        <div class="container-section">
+
+            <h1>Stack Utilizada</h1>
+
+            <div class="container-fluid cards">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img width="170px" src="{% static 'assets/django.png' %}" alt="">
+
+                            <h3>Estrutura: Servidor-Cliente</h3>
+
+                            <p>Na estruturação do projeto foi usado o Framework Django para criação de rotas, interação com o Banco de Dados, Exibição de Dados e interação com o usuário</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img width="270px" class="img_html" src="{% static 'assets/html+bootstrap.png' %}" alt="">
+
+                            <h3>Estilização </h3>
+
+                            <p>Na Estilização do Projeto Foi utilizado Html com presença acentuada do Framework Django para tornar visual toda a lógica construida e o Bootstrap para estilização de cores, tamanhos, fontes, entre outros.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="container-fluid imagem-seta">
+                        <a href="#home3">
+                            <img width="64px" src="{% static 'assets/setas-para-baixo.png' %}" alt="">
+                        </a>
+                    </div>
+        
+
+                </div>
+
+
+            </div>
+
+            
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    <section id="home2"><!--Inicio Section-->
+
+        <div class="container-section">
+
+            <h1 id="home3">Confira outros projetos</h1>
+
+            <div class="container-fluid cards">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="card">
+
+                            <iframe class="img-fluid" src="https://www.youtube.com/embed/hFpQ-yKPNO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <h3>Sistema Bancário em Python</h3>
+
+                            <p>Neste projeto Usei Python "puro" utilizando de técnicas de POO (Programação Orientada a Objetos), criei um sistema bancário onde é possível fazer saques, depósitos e também transferências, criar contas e Login autenticado no Banco de Dados.</p>
+
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/Kauasampaio96">
+                                    <img width="45.88px" src="{% static 'assets/github.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://bit.ly/likendin_kaua_chaves">
+                                    <img width="45.88px" src="{% static 'assets/linkedin.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://www.youtube.com/channel/UCypZvqMgmVWZsoYLztOASyg">
+                                    <img width="55.88px" src="{% static 'assets/youtube.png' %}" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <iframe class="img-fluid" src="https://www.youtube.com/embed/G6nDxY4Jwsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <h3>CRUD em Python</h3>
+
+                            <p>Neste projeto, aperfeiçoei conhecimentos de integração de Python com Banco de Dados, Fazendo consultas e alterções no mesmo, o usuário poderia Criar/Exbir/Alterar e Deletar registros do banco , Não contava com sistema de login, apenas a interação funcional com o Banco de Dados.</p>
+
+
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/Kauasampaio96">
+                                    <img width="45.88px" src="{% static 'assets/github.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://bit.ly/likendin_kaua_chaves">
+                                    <img width="45.88px" src="{% static 'assets/linkedin.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://www.youtube.com/channel/UCypZvqMgmVWZsoYLztOASyg">
+                                    <img width="55.88px" src="{% static 'assets/youtube.png' %}" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <video style="border-radius:20px ;" class="img-fluid" autoplay muted controls>
+                                <source src="{% static 'assets/Netflix Brasil - assistir a séries online, assistir a filmes online - Google Chrome 2022-08-24 19-38-28.mp4' %}" type="video/mp4">
+                              Seu Negador não suporta essa tag de vídeo.
+                              </video>
+
+                            <h3>Clone da Netflix com Html e Bootstrap</h3>
+
+                            <p>Neste projeto de Front-end utilizei conhecimentos de Html e Css/Bootstrap para construir um clone da interface (UI) da Netflix, contando com página Landing Page, Home da plataforma e página de login.</p>
+
+
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/Kauasampaio96">
+                                    <img width="45.88px" src="{% static 'assets/github.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://bit.ly/likendin_kaua_chaves">
+                                    <img width="45.88px" src="{% static 'assets/linkedin.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://www.youtube.com/channel/UCypZvqMgmVWZsoYLztOASyg">
+                                    <img width="55.88px" src="{% static 'assets/youtube.png' %}" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <video class="img-fluid" autoplay muted controls>
+                                <source src="{% static 'assets/Música para todos - Spotify e mais 1 página - Pessoal — Microsoft​ Edge 2022-09-05 19-30-58.mp4' %}" type="video/mp4">
+                              Seu Negador não suporta essa tag de vídeo.
+                              </video>
+
+                            <h3>Clone do Spotify com Html e Bootstrap</h3>
+
+                            <p>Neste projeto de Front-end utilizei conhecimentos de Html e Css/Bootstrap para construir um clone da interface (UI) do Spotify, contando com página Landing Page com Sliders, Página de Login/Cadastro e página Premium (Ainda em construção das demais páginas).</p>
+
+
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/Kauasampaio96">
+                                    <img width="45.88px" src="{% static 'assets/github.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://bit.ly/likendin_kaua_chaves">
+                                    <img width="45.88px" src="{% static 'assets/linkedin.png' %}" alt="">
+                                </a>
+    
+                                <a target="_blank" href="https://www.youtube.com/channel/UCypZvqMgmVWZsoYLztOASyg">
+                                    <img width="55.88px" src="{% static 'assets/youtube.png' %}" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+        
+
+                </div>
+
+
+            </div>
+
+            
+            
+
+        </div>
+
+    </section><!--Fim Section-->
+
+    
+
+
+    {% include 'parciais/_footer.html' %}
+
+</body>
+</html>
