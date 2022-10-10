@@ -11,3 +11,8 @@
 <p>
   O projeto foi feito com o objetivo de abordar Tecnologias tanto do Front-end como do Back-end (Django) em um CRUD que nada mais é que ações dentro de um banco de dados (READ, CREAT, UPDATE, DELETE)
 </p>
+
+
+<h2>Apresentação do Projeto no Youtube / About this Project</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6uxSZOiL5hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
