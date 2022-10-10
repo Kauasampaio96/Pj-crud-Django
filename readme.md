@@ -9,5 +9,5 @@
 <h2>Sobre o projeto / About this Project</h2>
 
 <p>
-  A ideia do projeto é 
+  O projeto foi feito com o objetivo de abordar Tecnologias tanto do Front-end como do Back-end (Django) em um CRUD que nada mais é que ações dentro de um banco de dados (READ, CREAT, UPDATE, DELETE)
 </p>
