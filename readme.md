@@ -13,6 +13,6 @@
 </p>
 
 
-<h2>Apresentação do Projeto no Youtube / About this Project</h2>
+<h2>Apresentação do Projeto no Youtube / Project Presentation on Youtube</h2>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6uxSZOiL5hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/6uxSZOiL5hg
